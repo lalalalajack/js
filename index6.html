@@ -1,0 +1,36 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-03-30 23:07:19
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-03-30 23:07:24
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 70px;
+        height: 70px;
+        background-color: #b8b5ff;
+      }
+    </style>
+    <script>
+      window.onload = function () {
+        var value = document.getElementById("item");
+        value.onmouseover = function () {
+          this.style.background = "#d8f887";
+        };
+        value.onmouseout = function () {
+          this.style.background = "#b8b5ff";
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <div id="item"></div>
+  </body>
+</html>

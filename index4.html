@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        background: greenyellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <button onclick="myFunc()">创建元素</button>
+    <script>
+      function myFunc() {
+        var e = document.createElement("div");
+        document.body.appendChild(e);
+      }
+    </script>
+  </body>
+</html>
