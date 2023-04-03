@@ -1,0 +1,51 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 19:35:51
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 19:49:10
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>绑定多个事件</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+            background-color: #2e7aeb;
+            margin-left: 50%;
+        }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            // 需求: 鼠标移入div变为绿色，鼠标移除时 div变为粉色
+            // 改为 bind 效果一样
+            // $("div").on("mouseover mouseout", function () {
+            //   if (event.type == "mouseover") {
+            //     $(this).css("background-color", "green");
+            //   } else {
+            //     $(this).css("background-color", "pink");
+            //   }
+            // });
+            $("div").hover(function () {
+                $(this).css({ "background-color": "green", "transform": "rotate(30deg)" });
+            }, function () {
+                $(this).css({ "background-color": "pink", "transform": "rotate(60deg)" });
+            })
+        });
+
+    </script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

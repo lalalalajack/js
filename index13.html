@@ -1,0 +1,39 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 17:29:40
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 17:29:46
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>位置伪类选择器</title>
+    <script>
+      $(function () {
+        $("li:first").css("color", "#a7c5eb");
+        $("li:last").css("color", "#ffc478");
+        $("li:odd").css("color", "#c1a1d3");
+        $("li:even").css("font-size", "25px");
+        $("li:eq(4)").css("text-shadow", "2px 2px 2px #96bb7c");
+        // $("li:lt(4)").css("text-shadow","2px 2px 2px #96bb7c");
+        // $("li:gt(4)").css("text-shadow","2px 2px 2px #96bb7c");
+      });
+    </script>
+  </head>
+  <body>
+    水果清单：
+    <ul>
+      <li>苹果</li>
+      <li>梨子</li>
+      <li>葡萄</li>
+      <li>西瓜</li>
+      <li>樱桃</li>
+      <li>草莓</li>
+      <li>桑葚</li>
+    </ul>
+  </body>
+</html>

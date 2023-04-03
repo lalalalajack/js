@@ -1,0 +1,38 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 17:30:35
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 17:30:39
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>可见性伪类选择器</title>
+    <style>
+      /*不可见元素*/
+      .select1 {
+        display: none; /*元素隐藏*/
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#btn1").click(function () {
+          $("div:hidden").css("display", "block"); /*让隐藏元素显示到页面上*/
+        });
+        $("#btn2").click(function () {
+          $("div:visible").css("color", "blue"); /*改变显示元素的字体颜色*/
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="select1">&#127773;</div>
+    <div class="select2">Hello</div>
+    <input id="btn1" type="button" value="显示" />
+    <input id="btn2" type="button" value="变色" />
+  </body>
+</html>

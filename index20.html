@@ -1,0 +1,44 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 23:33:28
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 23:33:32
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>get 和 post 的对比</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $.get(
+          "https://jsonplaceholder.typicode.com/users",
+          {
+            id: "2",
+            name: "Cici",
+          },
+          function (data, success) {
+            $("div").text("请求状态：" + success);
+          }
+        );
+        $.post(
+          "https://jsonplaceholder.typicode.com/users",
+          {
+            id: "3",
+            name: "Lee",
+          },
+          function (data, success) {
+            $("p").text("请求状态：" + success);
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div></div>
+    <p></p>
+  </body>
+</html>

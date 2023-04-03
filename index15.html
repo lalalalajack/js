@@ -1,0 +1,55 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 17:34:00
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 17:34:05
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="jquery-3.6.0.min.js"></script>
+    <title>内容伪类选择器</title>
+    <style>
+      table,
+      tr,
+      td {
+        border: 3px solid rgb(123, 145, 29);
+      }
+      td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("td:contains('1')").css("color", "#ade498");
+        $("tr:has(td)").css("background-color", "#e1ffc2");
+        $("td:empty").append("10"); // 在指定元素里添加内容
+        $("td:parent").append("❤")
+      });
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>123</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>213</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td></td>
+        <td>321</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 19:51:57
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 19:52:00
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>type 和 target 属性</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#btn").click(function () {
+          alert("这是一个 " + event.type + " 事件");
+          $(event.target).css("background-color", "#99f3db"); // event.target 相当于 this
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input id="btn" type="button" value="点击" />
+  </body>
+</html>

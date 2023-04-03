@@ -1,0 +1,43 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 20:15:15
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 20:15:20
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      div {
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 10px 0 0 10px;
+        text-align: center;
+        border: 1px solid rgb(27, 179, 128);
+      }
+    </style>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $("div")
+          .mouseover(function () {
+            $(this).hide(3000); // 鼠标移入时，隐藏该元素
+          })
+          .mouseout(function () {
+            $(this).show(3000); // 鼠标移出时，显示该元素
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!--
+ * @Author: cwj
+ * @Date: 2023-04-01 23:13:06
+ * @LastEditors: cwj
+ * @LastEditTime: 2023-04-01 23:14:56
+ * @Introduce: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>加载一个 txt 文件</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        $(".text").load("text.txt", function (response, status, xhr) {
+          $("p").text(
+            "请求结果为：" + response + "；" + "请求状态为：" + status
+          );
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="text"></div>
+    <p></p>
+  </body>
+</html>
